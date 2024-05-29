@@ -1,13 +1,18 @@
+inherit_from:
+  - https://raw.githubusercontent.com/cookpad/guides/master/.rubocop.yml
+
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 3.0
+  NewCops: enable
+  Exclude:
+    - vendor/**/*
+    - vendor/**/.*
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+RSpec/DescribedClass:
+  Enabled: false
+Gemspec/DevelopmentDependencies:
+  Enabled: false
