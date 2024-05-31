@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     millrace (0.1.0)
+      prorate
 
 GEM
   remote: https://rubygems.org/
@@ -23,6 +24,8 @@ GEM
     connection_pool (2.4.1)
     diff-lcs (1.5.1)
     drb (2.2.1)
+    hiredis-client (0.22.2)
+      redis-client (= 0.22.2)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     json (2.7.2)
@@ -33,10 +36,16 @@ GEM
     parser (3.3.1.0)
       ast (~> 2.4.1)
       racc
+    prorate (0.7.3)
+      redis (>= 2)
     racc (1.7.3)
     rack (3.0.11)
     rainbow (3.1.1)
     rake (13.2.1)
+    redis (5.2.0)
+      redis-client (>= 0.22.0)
+    redis-client (0.22.2)
+      connection_pool
     regexp_parser (2.9.0)
     rexml (3.2.8)
       strscan (>= 3.0.9)
@@ -96,8 +105,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  hiredis-client
   millrace!
   rake (~> 13.0)
+  redis
   rspec (~> 3.0)
   rubocop (~> 1.21)
   rubocop-performance
