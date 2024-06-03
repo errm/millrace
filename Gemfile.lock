@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    millrace (0.1.0)
+    millrace (0.1.1)
       prorate
 
 GEM
