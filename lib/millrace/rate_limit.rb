@@ -1,4 +1,4 @@
-girequire "digest"
+require "digest"
 require "prorate"
 
 module Millrace
