@@ -15,7 +15,7 @@ module Millrace
 
     def before(controller)
       bucket = get_bucket(controller.request.remote_ip)
-      level = record_request(bucket)
+      level = bucket.fillup(1).level
 
       return unless level > threshold
 
@@ -30,10 +30,6 @@ module Millrace
 
       def retry_after(level)
         ((level - threshold) / rate).to_i
-      end
-
-      def record_request(bucket)
-        bucket.fillup(1).level
       end
 
       def get_bucket(ip)
