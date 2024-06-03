@@ -1,4 +1,4 @@
-require "digest"
+girequire "digest"
 require "prorate"
 
 module Millrace
@@ -17,7 +17,7 @@ module Millrace
       bucket = get_bucket(controller.request.remote_ip)
       level = bucket.fillup(1).level
 
-      return unless level > threshold
+      return if level < threshold
 
       if level - 1 < threshold
         level = bucket.fillup(penalty).level
