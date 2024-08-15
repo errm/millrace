@@ -1,5 +1,8 @@
 # Millrace
 
+[![Gem Version](https://badge.fury.io/rb/millrace.svg)](https://badge.fury.io/rb/millrace)
+[![codecov](https://codecov.io/github/errm/millrace/graph/badge.svg?token=OG8LNDOUVO)](https://codecov.io/github/errm/millrace)
+
 ## Usage
 
 ```
