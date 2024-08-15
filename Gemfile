@@ -11,6 +11,8 @@ gem "rubocop", "~> 1.21"
 gem "rubocop-performance"
 gem "rubocop-rails"
 gem "rubocop-rspec"
+gem "simplecov"
+gem "simplecov-cobertura"
 
 gem "hiredis-client"
 gem "redis"

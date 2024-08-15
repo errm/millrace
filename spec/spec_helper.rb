@@ -1,5 +1,17 @@
 # frozen_string_literal: true
 
+require "simplecov"
+
+if ENV['CI']
+  require "simplecov-cobertura"
+  SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
+end
+
+SimpleCov.minimum_coverage 100
+SimpleCov.start do
+  add_filter "/spec/"
+end
+
 require "millrace"
 
 RSpec.configure do |config|

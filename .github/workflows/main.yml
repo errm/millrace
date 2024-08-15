@@ -37,3 +37,7 @@ jobs:
       run: bundle exec rake
       env:
         MILLRACE_REDIS_URL: redis://localhost:6379
+    - name: Upload test results to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
