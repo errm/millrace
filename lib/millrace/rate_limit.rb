@@ -42,7 +42,7 @@ module Millrace
       end
 
       def key(ip)
-        "millrace.#{name}.#{Digest::SHA1.hexdigest(ip)}"
+        "millrace.#{name}.#{Digest::SHA256.hexdigest(ip)}"
       end
 
       def capacity
